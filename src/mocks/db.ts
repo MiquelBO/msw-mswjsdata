@@ -16,10 +16,10 @@ db.user.create({
 
 db.user.create({
   name: 'user2',
-  email: 'user1@hotmail.com',
+  email: 'user2@hotmail.com',
 });
 
 db.user.create({
   name: 'user3',
-  email: 'user1@hotmail.com',
+  email: 'user3@hotmail.com',
 });
