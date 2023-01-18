@@ -12,14 +12,6 @@ describe('UserService', () => {
   let service: UserService;
   let davidUser: User;
 
-  beforeAll(() => {
-    worker.start();
-  });
-
-  afterAll(() => {
-    worker.stop();
-  });
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule]

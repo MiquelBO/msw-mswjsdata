@@ -65,6 +65,20 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "mock": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.mock.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -77,6 +91,9 @@
             },
             "development": {
               "browserTarget": "msw-mswjsdata:build:development"
+            },
+            "mock": {
+              "browserTarget": "msw-mswjsdata:build:mock"
             }
           },
           "defaultConfiguration": "development"
@@ -103,7 +120,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "fileReplacements": [
+              {
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.mock.ts"
+              }
+            ]
           }
         }
       }
